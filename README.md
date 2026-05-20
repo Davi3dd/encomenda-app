@@ -1,56 +1,76 @@
-# Welcome to your Expo app 👋
+# Encomenda App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+App mobile para agendamento de pedidos com pagamento antecipado, voltado para confeitarias e estabelecimentos que trabalham sob demanda.
 
-## Get started
+---
 
-1. Install dependencies
+## Equipe
 
-   ```bash
-   npm install
-   ```
+| Nome                     | Função            |
+| ------------------------ | ----------------- |
+| Davi Nunes da Encarnação | Backend           |
+| Erick Veras              | Backend           |
+| Maiara Leda Oliveira     | Design / Frontend |
+| Guilherme Mattos Macedo  | Frontend          |
 
-2. Start the app
+---
 
-   ```bash
-   npx expo start
-   ```
+## Tecnologias
 
-In the output, you'll find options to open the app in a
+- **Mobile:** React Native + Expo
+- **Backend:** Node.js + Express
+- **Banco de dados:** Firebase (Firestore)
+- **Notificações:** WhatsApp (Evolution API)
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## Como rodar
 
-## Get a fresh project
-
-When you're ready, run:
+### Backend
 
 ```bash
-npm run reset-project
+cd backend
+npm install
+npm run dev
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### App mobile
 
-### Other setup steps
+```bash
+npm install
+npx expo start
+```
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+---
 
-## Learn more
+## Funcionalidades
 
-To learn more about developing your project with Expo, look at the following resources:
+- [ ] Cadastro de estabelecimentos e clientes
+- [ ] Listagem de produtos com disponibilidade por data
+- [ ] Pedidos agendados com pagamento antecipado
+- [ ] Notificação automática ao estabelecimento via WhatsApp
+- [ ] Painel de gerenciamento de agenda
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+---
 
-## Join the community
+## Variáveis de ambiente
 
-Join our community of developers creating universal apps.
+Crie um `.env` dentro de `/backend` baseado no `.env.example`:
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```env
+PORT=3000
+FIREBASE_API_KEY=
+FIREBASE_PROJECT_ID=
+WHATSAPP_API_URL=
+WHATSAPP_API_KEY=
+```
+
+---
+
+## Padrão de commits
+
+```
+feat: nova funcionalidade
+fix: correção de bug
+docs: atualização de documentação
+```
