@@ -3,6 +3,8 @@ const cors = require("cors");
 const dotenv = require("dotenv");
 
 dotenv.config();
+const { db } = require("./src/firebase");
+console.log("Firebase conectado!");
 
 const app = express();
 
